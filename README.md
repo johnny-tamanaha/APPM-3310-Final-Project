@@ -5,11 +5,15 @@ Matrix Methods Final Project: Input-output matricies and the Leontiff input-outp
 Applications:
   
   1. Solve incompatible cases
-  
-    pinverse and projection are two methods for solutions. solvex displays both solutions with one script.
+    
+    pinverse -> solve using pseudoinverse
+    projection -> solve using projections between subspaces (and finding solution with minimal norm)
+    solvex -> disply solutions from pinverse and projection methods
   2. Predict total demand
-  
-    Using data from the 1997-2018 xlsx file, data extract pulls the matrix/vector pairs from specific sheets. 
-    predict_e predicted the external demand in a given year. 
-    predict_x_single predicts the total demand in one year given the ISC matrix of another year and predict_x_range repreats the prediction process for all years after the given year.
-    stability calculates the stability of each years ISC matrix and stable_predict gives somewhat stable prediction of future year total demand vectors using stability and predict_e for future years. 
+    
+    data_extract -> extract ISC/e matrix/vector pairs from a specific sheet
+    predict_x_single -> predict the total demand in one year given the ISC matrix of another year
+    predict_x_range -> predict the total demand in a range of years given the ISC matrix of the year before
+    predict_e -> predicted external demand in a given year
+    stability -> estimation of the stability of each year's ISC matrix
+    stable_predict -> uses stable years and predicted external demand vectors to predict future total demand
